@@ -30,6 +30,11 @@ def log_in_db():
         for row in data:
             if user_is == row['user_name'] and password == row['password']:
                 print('success you are logged in')
+
+                logged_in = input('(r)ead your data')
+                if logged_in == 'r':
+                    print(row['added_data'])
+
             elif user_is != row['user_name'] and password == row['password']:
                 print('Please retry log in')
                 return log_in_db()
@@ -37,8 +42,17 @@ def log_in_db():
                 print('Please retry logging in')
                 return log_in_db()
         else:
-            input('press any key to quit' )
-            return exit()
+            return log_out()
+
+
+def log_out():
+    log_out = input('Please select(L)og out, to(Q)uit or any other key to create a user' )
+    if log_out == "L":
+        return log_in_db()
+    elif log_out == "Q":
+        return exit()
+    else:
+        return new_user()
 
 
 
@@ -46,5 +60,13 @@ def log_in_db():
 
 
 
-search_db()
+
+
+
+
+
+
+
 log_in_db()
+search_db()
+log_out()
