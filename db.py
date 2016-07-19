@@ -1,5 +1,8 @@
 import csv
+
+
 def new_user():
+
     user_name = input("enter user ")
     password = input("enter password ")
     name = input("Enter your name ")
@@ -10,9 +13,8 @@ def new_user():
         outfile.write(line)
 
 
-#new_user()
-
 def search_db():
+
     with open("db_a.csv","r") as infile:
         data = csv.DictReader(infile,fieldnames=['user_name', 'password', 'name', 'added_data'])
         for row in data:
@@ -34,14 +36,14 @@ def log_in_db():
             elif user_is == row['user_name'] and password != row['password']:
                 print('Please retry logging in')
                 return log_in_db()
+        else:
+            input('press any key to quit' )
+            return exit()
 
 
 
 
 
-
-    print(user_is)
-    print(password)
 
 
 search_db()
