@@ -1,5 +1,13 @@
 import csv
 
+def welcome():
+    print('Welcome to the User database, \n ')
+    welcome = input('Please choose (L)og in or (C)reate a user')
+    if welcome == "L":
+        return log_in_db()
+    elif welcome == "C":
+        return new_user()
+
 
 def new_user():
 
@@ -46,7 +54,7 @@ def log_in_db():
 
 
 def log_out():
-    log_out = input('Please select(L)og out, to(Q)uit or any other key to create a user' )
+    log_out = input('Please select(L)og out, to(Q)uit or:\n any other key to create a user' )
     if log_out == "L":
         return log_in_db()
     elif log_out == "Q":
@@ -66,7 +74,7 @@ def log_out():
 
 
 
-
+welcome()
 log_in_db()
-search_db()
+#search_db()
 log_out()
