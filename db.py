@@ -2,10 +2,10 @@ import csv
 
 def welcome():
     print('Welcome to the User database, \n ')
-    welcome = input('Please choose (L)og in or (C)reate a user')
-    if welcome == "L":
+    welcome = input('Please choose (L)og in or (C)reate a user').lower()
+    if welcome == "l":
         return log_in_db()
-    elif welcome == "C":
+    elif welcome == "c":
         return new_user()
 
 
@@ -54,10 +54,10 @@ def log_in_db():
 
 
 def log_out():
-    log_out = input('Please select(L)og out, to(Q)uit or:\n any other key to create a user' )
-    if log_out == "L":
+    log_out = input('Please select(L)og out, to(Q)uit or:\n any other key to create a user' ).lower()
+    if log_out == "l":
         return log_in_db()
-    elif log_out == "Q":
+    elif log_out == "q":
         return exit()
     else:
         return new_user()
