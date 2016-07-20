@@ -22,8 +22,8 @@ def search_db():
 
 
 def log_in_db():
-    user_is = input('enter user_name' ' ')
-    password = input('enter password'' ')
+    user_is = input('enter user_name  ')
+    password = input('enter password  ')
 
     with open("db_a.csv", "r") as infile:
         data = csv.DictReader(infile, fieldnames=['user_name', 'password', 'name', 'added_data'])
