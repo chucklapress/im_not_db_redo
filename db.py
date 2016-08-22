@@ -54,8 +54,8 @@ def log_in_db():
 
 
 def log_out():
-    log_out = input('Please select(L)og out, to(Q)uit or:\n any other key to create a user' ).lower()
-    if log_out == "l":
+    log_out = input('Please select(R)eturn to go back to login screen:,\n To(Q)uit to end program, \n Or choose any other key to create a new user' ).lower()
+    if log_out == "r":
         return log_in_db()
     elif log_out == "q":
         return exit()
