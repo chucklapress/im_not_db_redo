@@ -76,5 +76,5 @@ def log_out():
 
 welcome()
 log_in_db()
-#search_db()
+search_db()
 log_out()
